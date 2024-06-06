@@ -10,29 +10,32 @@ hr {
 h1 {
     font-family: Arial;
     color: #2f2f2f;
+    margin: 0;
 }
 
 h2 {
     font-family: Arial;
     color: white;
     font-size: 1.17em;
-    margin-top: 0;
+    margin: 0;
 }
 
 h3 {
     font-family: Arial;
     color: #2f2f2f;
+    margin: 0;
 }
 
 h5 {
     font-family: Arial;
     color: white;
-    margin: 0; /* Ensure no extra margin */
+    margin: 4px;
 }
 
 p {
     font-family: Arial;
     color: #2f2f2f;
+    margin: 0;
 }
 
 label {
@@ -40,6 +43,9 @@ label {
     color: #2f2f2f;
 }
 
+
+
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -66,7 +72,7 @@ nav > section {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-image: url(/assets/logo-revou.svg);
+    background-image: url(/assets/cat-logo.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -84,10 +90,10 @@ nav > section {
     background-color: #F5F5F5;
 }
 
+
+/* Home */
 section#home {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2%;
+margin: 5%;
 }
 
 .section-container {
@@ -96,59 +102,80 @@ section#home {
     padding-bottom: 0%;
 }
 
-.banner-container {
-    height: 258px;
-    width: auto;
-    border: 1px solid #2f2f2f;
-}
-
-section#facilities {
-    background-color: #191A1B;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-.facilities-list {
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid white;
-}
-
-.facilities-list > div {
-    width: 100px;
-    height: 100px;
-    border: 1px solid orange;
-    display: flex;
-    align-items: flex-end; /* Align items to the bottom */
-    justify-content: center; /* Center horizontally */
-}
-
-.facilities1 {
-    background-image: url(/assets/check-in-svgrepo-com.svg);
-    background-color: white;
-    background-size: contain, cover;
+.banner-img {
+    height: 658px;
     background-repeat: no-repeat;
-    justify-content: center;
-    width: 90%;
-    height: 90%; 
+    background-size: cover;
+    background-position: center;
+    display: none;
+    border-radius: 15px;
+}
+
+.banner-container {
+    height: 658px;
+    width: auto;
+}
+
+section#home > article{
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
+}
+
+/* Facility */
+section#facilities{
+    background-color: #87D2FF;
+    padding: 3% 5% 5% 5%;
+}
+
+section#facilities.section-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 40px;
+}
+
+article.facility-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+article.facility-list > div{
+    display: flex;
     justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+article.facility-list > div > img{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+article.facility-list > div > div.list-text{
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+/* Message us */
+section#message-us {
+margin: 5%;
 }
 
 .form-result {
     height: 100%;
     border: 1px solid #2f2f2f;
     padding-left: 10px;
-}
-
-section#message-us {
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 .message-us-section {
@@ -183,7 +210,7 @@ form {
 
 .text-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     height: 25px;
     padding-right: 2%;
@@ -191,3 +218,6 @@ form {
     padding-right: 5%;
 }
 
+.break-word {
+    word-wrap: break-word;
+}

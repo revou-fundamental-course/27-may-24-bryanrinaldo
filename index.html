@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryan Portfolio</title>
+    <title>Your Pet Needs</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,39 +21,62 @@
     <section class="section-container">
         <!-- Home -->
         <section id="home">
-            <header>
-                <div class="banner-container"></div>
-                <h1>Hi <span>Bryan</span>, Welcome to my website</h1>
-            </header>
-
             <article>
-                <p>Lorem ipsum dolor sit amet</p>
+                <h1>Hi <span id="guest-name">...</span>, Welcome to Your Pet Needs</h1>
+                <p> Keep your pet happy for life with complete and comprehensive services!</p>
+            </div>
+            </article>   
 
+            <header>
                 <div class="banner-container">
-                    
-
+                    <div class="banner-img" style="background-image: url(assets/image-pet-clinic.jpg);"></div>
+                    <div class="banner-img" style="background-image: url(assets/image-pet-hotel.jpg);"></div>
+                    <div class="banner-img" style="background-image: url(assets/image-pet-shop.jpg);"></div>
                 </div>
-            </article>            
+            </header>         
         </section>
 
+        
         <!-- Our Facilities -->
-        <section id="facilities">
+        <section id="facilities" class="section-content">
             <header>
-                <h2>Our Facilities</h2>
+                <h1 style="color: white;">Our Facility</h1>
+                <p style="color: white;">Veterinary clinics, cozy hotels, professional grooming services, and a wide range of products to meet all your <span>pet's </span>needs</p>
             </header>
 
-            <article class="facilities-list">
-                <div class="fasilities1">
-                  <h5>Fasilitas 1</h5>
-                </div>
+            <article class="facility-list">
                 <div>
-                  <h5>Fasilitas 2</h5>
+                    <img src="assets/shop.svg" alt="Shop">
+                    <div class="list-text">
+                        <h2>Shop</h2>
+                        <h5 style="width: 200px; text-align: center;">Providing various needs for your Pets</h5>
+                    </div>
                 </div>
+
                 <div>
-                  <h5>Fasilitas 3</h5>
+                    <img src="assets/grooming.svg" alt="Grooming">
+                    <div class="list-text">
+                        <h2>Grooming</h2>
+                        <h5 style="width: 200px; text-align: center;">Keeping your Pets looking and smelling clean</h5>
+                    </div>
                 </div>
+
                 <div>
-                  <h5>Fasilitas 4</h5>
+                    <img src="assets/clinic.svg" alt="Clinic">
+                    <div class="list-text">
+                        <h2>Clinic</h2>
+                        <h5 style="width: 200px; text-align: center;">Helps you keep and maintain your 
+                            Pets health and nutrition</h5>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="assets/hotel.svg" alt="Hotel">
+                    <div class="list-text">
+                        <h2>Hotel</h2>
+                        <h5 style="width: 200px; text-align: center;">A high-quality care service to ensure
+                            your Pets safety</h5>
+                    </div>
                 </div>
             </article>
         </section>
@@ -62,7 +85,7 @@
         <!-- Message Us -->
         <section id="message-us">
             <header>
-                <h1>Message Us</h1>
+                <h1>Need help? Contact Us!</h1>
             </header>
 
             <section class="message-us-section">
@@ -78,8 +101,9 @@
                                         type="text"
                                         class="input-text"
                                         name="nama"
-                                        id="nama"
+                                        id="name-input"
                                         placeholder="Nama"
+                                        
                                     />
                                 </td>
                             </tr>
@@ -90,8 +114,8 @@
                                     <input
                                         type="date"
                                         class="input-date"
-                                        name="tgl_lahir"
-                                        id="tgl_lahir"
+                                        name="birth-dateinput"
+                                        id="birth-dateinput"
                                     />
                                 </td>
                             </tr>
@@ -102,7 +126,7 @@
                                     <input
                                         type="radio"
                                         class="input-radio"
-                                        id="laki-laki"
+                                        id="jenis_kelamin"
                                         name="jenis_kelamin"
                                         value="Laki-Laki"
                                     />
@@ -110,7 +134,7 @@
                                     <input
                                         type="radio"
                                         class="input-radio"
-                                        id="perempuan"
+                                        id="jenis_kelamin"
                                         name="jenis_kelamin"
                                         value="Perempuan"
                                     />
@@ -133,17 +157,22 @@
 
                             <tr>
                                 <td>
-                                    <input class="submit-button" type="submit" class="button" value="SUBMIT"/>
+                                    <button class="submit-button" type="button" onclick="formValidation()">Send Form</button>
                                 </td>
                             </tr>
                         </table>
                     </form>
                 </section>
 
-                <!-- Result -->
-                <section class="result-container">
-                    <div class="form-result"></div>                    
-                </section>                
+                <!-- Form Result -->
+                <section class="result">
+                    <div class="form-result">
+                      <p><b>Nama: </b> <span id="name-input"></span></p>
+                      <p><b>Tanggal lahir: </b> <span id="birth-dateinput"></span></p>
+                      <p><b>Jenis kelamin: </b> <span id="jenis_kelamin"></span></p>
+                      <p><b>Pesan: </b> <span id="message"></span></p>
+                    </div>
+                  </section>              
             </section>
         </section>
     </section>
@@ -152,6 +181,7 @@
     <!-- Footer -->
     <footer>
         <section class="text-footer">
+            <h3>Make sure your pet is healthy and happy!</h3>
             <h3>Created by RevoU</h3>
         </section>
     </footer>
